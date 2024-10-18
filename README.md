@@ -9,6 +9,13 @@ This project is a simple URL shortener application that converts long URLs into 
 - Uses PostgreSQL for persistent storage.
 - Deployed online for testing and production use.
 
+## Technologies Used
+
+- Spring Boot
+- PostgreSQL
+- Maven
+- Java 21
+
 ## Endpoints
 
 ### 1. Shorten a URL (POST request)
@@ -93,12 +100,12 @@ CREATE DATABASE urldb;
 Example configuration in `application.properties`:
 
 ```properties
-spring.datasource.url=jdbc:postgresql://your-database-url/urldb?user=your-username&password=your-password&sslmode=require
+spring.datasource.url=jdbc:postgresql://localhost:8080/your_db_name
 spring.datasource.username=your-username
 spring.datasource.password=your-password
 spring.jpa.hibernate.ddl-auto=update
 spring.jpa.show-sql=true
-spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect
+
 ```
 
 Alternatively, you can set these values as environment variables in your deployment environment.
@@ -134,9 +141,3 @@ The project is deployed and can be accessed using the following URLs:
 
 Make sure to replace the placeholder with actual URLs for your deployed application and database.
 
-## Technologies Used
-
-- Spring Boot
-- PostgreSQL
-- Maven
-- Java 21
